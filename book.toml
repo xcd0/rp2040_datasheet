@@ -1,0 +1,43 @@
+[book]
+authors = ["xcd0"]
+language = "en"
+multilingual = false
+src = "src"
+title = "RP2040 Datasheet - A microcontroller by Raspberry Pi"
+
+[build]
+create-missing = false
+
+[output]
+[output.html]
+
+git-repository-url = ""
+mathjax-support = true
+
+additional-css = ["theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js", "theme/mermaid.min.js", "theme/mermaid-init.js"]
+#additional-js  = ["mermaid.min.js", "mermaid-init.js"]
+theme = "theme" # this is the default if not explicitly set
+
+[output.html.search]
+limit-results = 1000     # maximum number of search results
+use-boolean-and = true   # multiple search terms must all match
+
+# # 右にtocを表示する
+# # cargo install mdbook-pagetoc
+# # が必要
+[preprocessor.theme]
+content-max-width = "65%"
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.pagetoc]
+pagetoc = true
+fontsize = "0.8em"
+
+# 目次を折りたたむ
+#[output.html.fold]
+#enable = false
+#level = 0
+
