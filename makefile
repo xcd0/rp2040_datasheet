@@ -36,7 +36,7 @@ push:
 	./push.sh
 
 install-cargo-binstall:
-	@if !(type cargo >/dev/null 2>&1); then curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash; else echo -n "cargo-binstall is "; which cargo-binstall; fi
+	if !(type cargo-binstall >/dev/null 2>&1); then curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash; else echo -n "cargo-binstall is "; which cargo-binstall; fi
 install-mdbook:
 	cargo binstall -y mdbook
 install-mdbook-mermaid:
